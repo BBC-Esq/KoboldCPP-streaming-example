@@ -25,7 +25,7 @@ pip install -r requirements.txt --no-deps
 ```
 python chat_kobold_stream.py
 ```
-7 Usage
+7) Usage
 - Click the ```download``` button to open the downloader and choose a version of kobold to download.
 - It'll download to the current folder.
 - Doubleclick the file and start ```Kobold``` the traditional way.
