@@ -7,6 +7,7 @@ import requests
 import sseclient
 import logging
 
+
 import download_kobold
 
 class APIWorker(QThread):
@@ -80,16 +81,16 @@ class ChatWindow(QWidget):
         self.api_url = "http://localhost:5001/api/extra/generate/stream"
         self.current_response = ""
 
-        def send_message(self):
-            prompt = self.input_area.text()
-            self.input_area.clear()
-            self.current_response = ""
-            
-            self.response_area.clear()
-            
-            self.response_area.append(f"<b>You:</b> {prompt}")
-            self.response_area.append("\n")
-            self.get_completion(prompt)
+    def send_message(self):
+        prompt = self.input_area.text()
+        self.input_area.clear()
+        self.current_response = ""
+        
+        self.response_area.clear()
+        
+        self.response_area.append(f"<b>You:</b> {prompt}")
+        self.response_area.append("\n")
+        self.get_completion(prompt)
 
     def get_completion(self, prompt):
         payload = {
